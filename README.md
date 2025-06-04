@@ -23,7 +23,8 @@ This project leverages machine learning algorithms to predict the likelihood of 
 - Python
 - pandas, numpy
 - matplotlib, seaborn
-- scikit-learn (Random Forest, Logistic Regression, etc.)
+- scikit-learn (Random Forest)
+- Streamlit (for the web interface)
 
 ## 🧪 Model Overview
 
@@ -34,8 +35,6 @@ This project leverages machine learning algorithms to predict the likelihood of 
 
 ## 📂 Repository Structure
 
-```
-
 stroke-prediction-ml/
 │
 ├── stroke\_prediction.ipynb     # Jupyter notebook with full implementation
@@ -44,26 +43,43 @@ stroke-prediction-ml/
 ├── .gitignore                  # Files to ignore
 └── LICENSE                     # License (optional)
 
-````
+
+
+stroke-prediction-ml/
+│
+├── code.ipynb                           # Jupyter notebook with full implementation
+├── app.py                               # Streamlit web app for user interaction
+├── healthcare-dataset-stroke-data.csv   # Dataset
+├── stroke_model.pkl                     # Trained ML model
+├── scaler.pkl                           # Scaler object for numeric features
+├── label_encoders.pkl                   # Encoders for categorical features
+├── requirements.txt                     # Dependencies list
+├── README.md                            # Project documentation
+
 
 ## 🚀 How to Run
 
 1. Clone the repo:
-   ```bash
+   bash
    git clone https://github.com/GUNALSABITHA/Forecasting-Stroke-Risk.git
    cd Forecasting-Stroke-Risk
-````
 
 2. Install dependencies:
 
-   ```bash
+   bash
    pip install -r requirements.txt
-   ```
+   
 3. Open and run the notebook:
 
-   ```bash
+   bash
    jupyter notebook stroke_prediction.ipynb
-   ```
+
+## 🌐 Streamlit Web App
+To launch the frontend interface:
+bash
+streamlit run app.py
+
+The app allows users to input personal health metrics and get real-time stroke risk predictions powered by the trained model.
 
 
 
